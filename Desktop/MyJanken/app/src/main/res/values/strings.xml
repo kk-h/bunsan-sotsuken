@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyJanken</string>
+    <string name="menu">メニュー表</string>
+    <string name="order">注文する</string>
+    <string name="curry">カレーライス</string>
+    <string name="fish_and_chips">フィッシュアンドチップス</string>
+    <string name="soba">そば</string>
+    <string name="pizza">ピザ</string>
+    <string name="sashimi">さしみ</string>
+    <string name="steak">ステーキ</string>
+    <string name="salad">サラダ</string>
+    <string name="pasta">パスタ</string>
+    <string name="default_value">0</string>
+</resources>

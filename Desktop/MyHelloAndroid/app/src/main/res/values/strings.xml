@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyHelloAndroid</string>
+    <string name="showHere">ここに表示されます！</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="118dp"
+        android:layout_marginRight="118dp"
+        android:onClick="onOrderButtonTapped"
+        android:text="@string/order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/curry"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/curry"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_text"
+        app:srcCompat="@drawable/curry" />
+
+    <ImageButton
+        android:id="@+id/fish_and_chips"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/fish_and_chips"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/curry"
+        app:layout_constraintTop_toBottomOf="@+id/menu_text"
+        app:srcCompat="@drawable/fishchips" />
+
+    <ImageButton
+        android:id="@+id/pasta"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/pasta"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curry"
+        app:srcCompat="@drawable/pasta" />
+
+    <ImageButton
+        android:id="@+id/pizza"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/pizza"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pasta"
+        app:layout_constraintTop_toBottomOf="@+id/fish_and_chips"
+        app:srcCompat="@drawable/pizza" />
+
+    <ImageButton
+        android:id="@+id/salad"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/salad"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta"
+        app:srcCompat="@drawable/salad" />
+
+    <ImageButton
+        android:id="@+id/soba"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/soba"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/salad"
+        app:layout_constraintTop_toBottomOf="@+id/pizza"
+        app:srcCompat="@drawable/soba" />
+
+    <ImageButton
+        android:id="@+id/steak"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/steak"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/order_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salad"
+        app:srcCompat="@drawable/steak" />
+
+    <ImageButton
+        android:id="@+id/sashimi"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/sashimi"
+        android:onClick="onSelectedMenu"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/order_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/steak"
+        app:layout_constraintTop_toBottomOf="@+id/soba"
+        app:srcCompat="@drawable/sushi" />
+
+    <TextView
+        android:id="@+id/order_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注文したものが表示されます"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/orderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClearButtonTapped"
+        android:text="リセット"
+        app:layout_constraintBaseline_toBaselineOf="@+id/orderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orderButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

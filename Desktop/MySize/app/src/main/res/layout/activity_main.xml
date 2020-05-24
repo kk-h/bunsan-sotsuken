@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="170dp"
+        app:srcCompat="@drawable/ic_mysize"
+        android:id="@+id/droid_image"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.3"
+        android:contentDescription="@string/app_name"/>
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/neck"
+        android:hint="首回り"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        app:layout_constraintRight_toLeftOf="@+id/droid_image"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="@+id/droid_image"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/sleeve"
+        android:hint="裄丈"
+        app:layout_constraintTop_toTopOf="@+id/droid_image"
+        app:layout_constraintBottom_toBottomOf="@+id/droid_image"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/droid_image"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/inseam"
+        android:hint="股下"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/droid_image"
+        app:layout_constraintRight_toRightOf="@+id/droid_image"
+        app:layout_constraintLeft_toLeftOf="@+id/droid_image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/waist"
+        android:hint="胴回り"
+        app:layout_constraintBottom_toBottomOf="@+id/droid_image"
+        app:layout_constraintRight_toLeftOf="@+id/droid_image"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="保存"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_height"
+        android:id="@+id/height_button"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/app_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
