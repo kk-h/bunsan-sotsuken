@@ -10,23 +10,37 @@
         android:id="@+id/resultNumber"
         android:layout_width="400dp"
         android:layout_height="150dp"
+        android:layout_marginBottom="64dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultNumber2"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="100sp"
         app:layout_constraintBottom_toTopOf="@+id/buckButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/resultNumber" />
 
     <Button
         android:id="@+id/buckButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="201dp"
+        android:layout_marginTop="191dp"
         android:onClick="onBuckButtonTapped"
         android:text="戻る"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/resultNumber2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

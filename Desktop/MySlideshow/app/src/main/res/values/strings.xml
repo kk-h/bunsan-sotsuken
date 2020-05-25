@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MySlideshow</string>
+    <string name="prev"><![CDATA[<]]></string>
+    <string name="next"><![CDATA[>]]></string>
+</resources>
