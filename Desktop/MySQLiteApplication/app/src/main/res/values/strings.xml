@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MySQLiteApplication</string>
+    <string name="hint_key">company</string>
+    <string name="hint_value">US$price</string>
+    <string name="insert">insert</string>
+    <string name="read">read</string>
+</resources>
