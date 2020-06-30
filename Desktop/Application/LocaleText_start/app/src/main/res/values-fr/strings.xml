@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LocaleText</string>
+    <string name="action_help">Aide</string>
+    <string name="description">"Le nougat est une famille de confiseries faites avec du sucre ou du miel, des noix grillées (les amandes, les noix, les pistaches, les noisettes et les noix de macadamia sont courantes), des blancs d'œufs fouettés et parfois des fruits confits hachés. Il est utilisé dans une variété de barres de bonbons et de chocolats. "</string>
+    <string name="nougat">Paquet de bonbons au nougat</string>
+    <string name="help_text">Si vous avez besoin d\'aide, contactez notre service d\'assistance.</string>
+</resources>

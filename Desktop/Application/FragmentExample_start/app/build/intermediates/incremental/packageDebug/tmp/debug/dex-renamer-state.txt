@@ -1,0 +1,4 @@
+#Sun Jun 21 01:01:41 JST 2020
+base.0=/Users/kobayashikakeru/Desktop/FragmentExample_start/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
