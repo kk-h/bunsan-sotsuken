@@ -1,0 +1,4 @@
+#Sun Jun 28 23:35:23 JST 2020
+base.0=/Users/kobayashikakeru/Desktop/RecyclerView_start/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

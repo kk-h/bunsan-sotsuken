@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/menu_map_options.xml.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/menu/map_options.xml"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/raw_map_style.json.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/raw/map_style.json"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/drawable_android.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/drawable/android.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kobayashikakeru/Desktop/Wander/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat",
+        "source": "/Users/kobayashikakeru/Desktop/Wander/app/src/main/res/layout/activity_maps.xml"
+    }
+]

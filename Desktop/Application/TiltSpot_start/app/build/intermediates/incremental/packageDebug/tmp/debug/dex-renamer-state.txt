@@ -1,0 +1,4 @@
+#Fri Jun 26 17:22:37 JST 2020
+base.0=/Users/kobayashikakeru/Desktop/Application/TiltSpot_start/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
