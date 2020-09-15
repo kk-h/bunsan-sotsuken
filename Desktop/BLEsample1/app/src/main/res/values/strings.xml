@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BLE sample1</string>
+    <string name="noBLE">Cannot find BLE.</string>
+</resources>
