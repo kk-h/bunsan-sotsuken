@@ -102,11 +102,11 @@
                 android:text="累計接続人数" />
 
             <Button
-                android:id="@+id/readbutton2"
+                android:id="@+id/writebutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Read 2" />
+                android:text="書き込み" />
 
         </LinearLayout>
 
@@ -137,10 +137,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CHARA2: "
+                android:text="書き込む数値: "
                 android:textSize="20dp"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/chara2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -154,9 +154,15 @@
             android:text="Connect PHP"
             android:textSize="20dp"/>
 
-        <TextView
-            android:id="@+id/textview"
+        <Button
+            android:id="@+id/gotoURL"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="show web"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>

@@ -10,6 +10,7 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,18 +27,22 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
     private final static String TAG = "Gatt Info";
     private String name;
     private String address = "";
+    String url;
     private UUID uuids[][];
     private int key;
+    private int mNum = 0;
+    long start;
+    long end;
 
     private Button connectButton;
     private Button disconnectButton;
     private Button readCumulativeButton;
-    private Button readButton2;
+    private Button writeButton;
     private Button connectPHP;
+    private Button toURL;
 
     private TextView textUuids;
-    private EditText chara1;
-    private EditText chara2;
+    private TextView text;
     private MyAsyncTask task;
 
     private BluetoothAdapter bluetoothAdapter;
@@ -56,19 +61,23 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
         TextView textName = (TextView) findViewById(R.id.devicename);
         TextView textAddress = (TextView) findViewById(R.id.deviceaddress);
         textUuids = (TextView) findViewById(R.id.deviceuuids);
+        text = (TextView)findViewById(R.id.text);
         textName.setText(name);
         textAddress.setText(address);
+
 
         connectButton = (Button) findViewById(R.id.connectbutton);
         disconnectButton = (Button) findViewById(R.id.disconnectbutton);
         readCumulativeButton = (Button) findViewById(R.id.readCumulativeButton);
-        readButton2 = (Button) findViewById(R.id.readbutton2);
+        writeButton = (Button) findViewById(R.id.writebutton);
         connectPHP = (Button)findViewById(R.id.connectPHP);
+        toURL = (Button)findViewById(R.id.gotoURL);
         connectButton.setOnClickListener(this);
         disconnectButton.setOnClickListener(this);
         readCumulativeButton.setOnClickListener(this);
-        readButton2.setOnClickListener(this);
+        writeButton.setOnClickListener(this);
         connectPHP.setOnClickListener(this);
+        toURL.setOnClickListener(this);
 
         uuids[0][0] = UUID.fromString("ab394469-185b-5f57-4a70-dd53dbdea64b");
         uuids[0][1] = UUID.fromString("3cb08b55-71d2-33e9-8d9d-ad3fecb06bd6");
@@ -87,6 +96,9 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
             finish();
             return;
         }
+
+        connect();
+        connectButton.setEnabled(false);
     }
 
     @Override
@@ -102,18 +114,23 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
             return;
         }
         if (v.getId() == readCumulativeButton.getId()) {
+            start = System.currentTimeMillis();
             readCharacteristic(uuids[key][0], uuids[key][1]);
-            return;
+            task = new MyAsyncTask(this, uuids[key][0], mNum);
+            task.execute();
+            Log.i(TAG, "start connect php");
         }
-        if (v.getId() == readButton2.getId()) {
-            Toast.makeText(this, "read chara2", Toast.LENGTH_SHORT).show();
+        if (v.getId() == writeButton.getId()) {
             readCharacteristic(uuids[key][0], uuids[key][2]);
             return;
         }
         if(v.getId() == connectPHP.getId()){
-            task = new MyAsyncTask(this, uuids[key][0]);
+            task = new MyAsyncTask(this , uuids[key][0], mNum);
             task.execute();
             Log.i(TAG, "start connect php");
+        }
+        if (v.getId() == toURL.getId()){
+            connectWeb();
         }
     }
 
@@ -141,7 +158,7 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
         connectButton.setEnabled(true);
         disconnectButton.setEnabled(false);
         readCumulativeButton.setEnabled(false);
-        readButton2.setEnabled(false);
+        writeButton.setEnabled(false);
     }
 
     private void readCharacteristic(UUID uuid1, UUID uuid2) {
@@ -159,6 +176,23 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
         BluetoothGattCharacteristic characteristic = bluetoothGatt.getService(uuid1).getCharacteristic(uuid2);
         characteristic.setValue(value);
         bluetoothGatt.writeCharacteristic(characteristic);
+    }
+
+    public void returnNum(String str){
+        char c = '"';
+        if(str.charAt(0) == c && str.charAt(str.length()-1) == c) {
+            this.url = str.substring(1, str.length()-1);
+        }
+        connectWeb();
+    }
+
+    private void connectWeb(){
+        Uri uri = Uri.parse(url);
+        Intent mIntent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(mIntent);
+        end = System.currentTimeMillis();
+        long time = end - start;
+        Log.i("used time", String.valueOf(time));
     }
 
     private final BluetoothGattCallback gattCallBack = new BluetoothGattCallback() {
@@ -183,7 +217,7 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
                 runOnUiThread(new Runnable() {
                     public void run() {
                         readCumulativeButton.setEnabled(false);
-                        readButton2.setEnabled(false);
+                        writeButton.setEnabled(false);
                     }
                 });
                 return;
@@ -210,10 +244,9 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(showInfo.this, "uuid match", Toast.LENGTH_SHORT).show();
                                 textUuids.setText(uuids[key][0].toString());
                                 readCumulativeButton.setEnabled(true);
-                                readButton2.setEnabled(true);
+                                writeButton.setEnabled(true);
                             }
                         });
                         continue;
@@ -235,6 +268,7 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
                     @Override
                     public void run() {
                         ((TextView) findViewById(R.id.chara1)).setText(trueStr);
+                        mNum = Integer.parseInt(trueStr);
                     }
                 });
                 return;
@@ -245,7 +279,7 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        ((TextView) findViewById(R.id.chara2)).setText(trueStr);
+                        ((EditText) findViewById(R.id.chara2)).setText(trueStr);
                     }
                 });
                 return;
@@ -259,7 +293,7 @@ public class showInfo extends AppCompatActivity implements View.OnClickListener 
         connectButton.setEnabled(false);
         disconnectButton.setEnabled(false);
         readCumulativeButton.setEnabled(false);
-        readButton2.setEnabled(false);
+        writeButton.setEnabled(false);
         if (!address.equals("")) {
             connectButton.setEnabled(true);
         }
